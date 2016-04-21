@@ -1,0 +1,69 @@
+package myserver.api.modules;
+
+import javax.annotation.Resource;
+
+import com.lib.mysql.FacadeMySqlDao;
+import com.lib.transport.BaseTpDao;
+import com.lib.transport.FacadeTpDao;
+import com.lib.transport.HttpClientTemplate;
+
+
+public class BaseService {
+
+	@Resource
+	protected FacadeService facadeService;
+
+	@Resource
+	protected BaseTpDao baseTpDao;
+
+	@Resource
+	protected FacadeTpDao facadeTpDao;
+
+	@Resource
+	protected FacadeMySqlDao facadeMySqlDao;
+	
+	@Resource
+	protected HttpClientTemplate httpClientTemplate;
+
+	public FacadeService getFacadeService() {
+		return facadeService;
+	}
+
+	public void setFacadeService(FacadeService facadeService) {
+		this.facadeService = facadeService;
+	}
+
+	public BaseTpDao getBaseTpDao() {
+		return baseTpDao;
+	}
+
+	public void setBaseTpDao(BaseTpDao baseTpDao) {
+		this.baseTpDao = baseTpDao;
+	}
+
+	public FacadeTpDao getFacadeTpDao() {
+		return facadeTpDao;
+	}
+
+	public void setFacadeTpDao(FacadeTpDao facadeTpDao) {
+		this.facadeTpDao = facadeTpDao;
+	}
+
+	public HttpClientTemplate getHttpClientTemplate() {
+		return httpClientTemplate;
+	}
+
+	public void setHttpClientTemplate(HttpClientTemplate httpClientTemplate) {
+		this.httpClientTemplate = httpClientTemplate;
+	}
+
+	public FacadeMySqlDao getfacadeMySqlDao() {
+		return facadeMySqlDao;
+	}
+
+	public void setfacadeMySqlDao(FacadeMySqlDao mySqlDao) {
+		this.facadeMySqlDao = mySqlDao;
+	}
+
+	
+}
